@@ -223,7 +223,7 @@ python/                      # Python programs for practice
 ├── calculator.py            # Four arithmetic operator
 └── chatbot.py               # Chatbot
 ```
-## Hilights
+## Highlights
 
 ### [BMI Calculator](c/bmi_calculator/v5.c)  
 - Calculates BMI (Body Mass Index) based on height and weight input  
