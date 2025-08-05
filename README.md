@@ -1,6 +1,8 @@
 # practice
 
-学習用に作成した各種プログラムをまとめたリポジトリです。  
+学習用に作成した各種プログラムをまとめたリポジトリです。
+
+Read this in English: [README_en.md](README_en.md)  
 
 ### 目次
 - [概要](#概要)  
@@ -216,4 +218,5 @@ python/                      # Pythonの練習コード
 ├── calculator.py            # 四則演算プログラム
 └── chatbot.py               # チャットボット
 ```
+
 
