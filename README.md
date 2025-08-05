@@ -7,8 +7,8 @@ Read this in English: [README_en.md](README_en.md)
 ### 目次
 - [概要](#概要)  
 - [実行方法](#実行方法)  
-	- [Windows](#windows)
-	- [macOS](#macos)
+	- [Windows](#windows)  
+	- [macOS](#macos)  
 - [ディレクトリ構成](#ディレクトリ構成)  
 - [注目のプログラム](#注目のプログラム)  
 	- [BMI計算プログラム](#bmi計算プログラム)  
@@ -188,9 +188,18 @@ c/                           # C言語の練習コード
   
 javascript/                  # JavaScriptの練習コード  
 ├── english_exam/            # 英単語クイズプログラム  
+│   └── english_exam_v0.js    # 基本バージョン  
+│   └── english_exam_v1.js    # 間違えた単語を表示  
+│   └── english_exam_v2.js    # スコアに応じたメッセージを表示  
+│   └── english_exam_v3.js    # ヒントを表示  
 └── shuffle.js               # シャッフルプログラム  
   
 python/                      # Pythonの練習コード  
+├── todo/                    # ToDoアプリ  
+│   └── todo_v0.py            # 基本バージョン  
+│   └── todo_v1.py            # 締切設定機能を追加  
+│   └── todo_v2.py            # 優先順位設定機能を追加  
+│   └── todo_v3.py            # 編集機能を追加  
 ├── 02-1.py                  # 演算子の練習  
 ├── 02-2.py                  # 身長予測プログラム1  
 ├── 02-3.py                  # 割り勘プログラム  
@@ -240,6 +249,15 @@ python/                      # Pythonの練習コード
 - ユーザーの入力した誕生日に基づいて、星座を判定します  
 - 簡単なWebアプリにしたものを別のリポジトリに公開しています（[星座判定アプリ](https://github.com/kotonekanno/zoadic-checker)）  
 - Pythonで記述しています  
+
+### [ToDoアプリ](python/todo/)
+- このリポジトリ内で最も規模の大きいプログラムです
+- ただし、開発の過程でいくつかバグが発生しており、特にv4は不完全な状態となっています  
+- バージョンごとに段階的に機能を追加しています  
+    - v0：基本的な機能のみ  
+    - v1：締め切りを設定できるように改良  
+    - v2：優先順位を設定できるように改良  
+    - v3：編集機能を追加（バグあり）  
 
 ### [英単語クイズ](javascript/english_exam/)  
 - プログラミングに関連する英単語のクイズです  

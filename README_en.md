@@ -5,8 +5,8 @@ There are some programs that I wrote for practice.
 ### Table of Contents
 - [Overview](#overview)  
 - [Usage](#usage)  
-  - [Windows](#windows)
-  - [macOS](#macos)
+  - [Windows](#windows)  
+  - [macOS](#macos)  
 - [Directory Structure](#directory-structure)  
 - [Highlights](#highlights)  
   - [BMI Calvulator](#bmi-calculator)
@@ -188,9 +188,18 @@ c/                           # C programs for practice
   
 javascript/                  # JavaScript programs for practice  
 ├── english_exam/            # English word quiz  
+│   └── english_exam_v0.js    # Basic version  
+│   └── english_exam_v1.js    # Shows incorrect answers  
+│   └── english_exam_v2.js    # Display a message based on the score  
+│   └── english_exam_v3.js    # Provides a hint when prompted  
 └── shuffle.js               # Shuffle function  
   
 python/                      # Python programs for practice  
+├── todo/                    # Task manager  
+│   └── todo_v0.py            # Basic version  
+│   └── todo_v1.py            # Adds deadline setting  
+│   └── todo_v2.py            # Adds priority setting
+│   └── todo_v3.py            # Adds editing feature  
 ├── 2-1.py                   # Operator practice  
 ├── 2-2.py                   # Height estimator  
 ├── 2-3.py                   # Bill splitter  
@@ -221,7 +230,7 @@ python/                      # Python programs for practice
 ├── 13-1.py                  # Score calculator 3  
 ├── 13-2.py                  # Area calculator  
 ├── calculator.py            # Four arithmetic operator
-└── chatbot.py               # Chatbot
+└── chatbot.py               # Chatbot  
 ```
 ## Highlights
 
@@ -238,7 +247,16 @@ python/                      # Python programs for practice
 ### [Zoadic Sign Checker](python/04-1_v2.py)  
 - Tells the zoadic sign based on the entered birth date  
 - A simple web app version is also available in another repository: [Zoardic Checker](https://github.com/kotonekanno/zoadic-checker)  
-- Written in Python  
+- Written in Python 
+
+### [Task Manager](python/todo/)
+- The largest program in this repository  
+- However, it contains several bugs, and version 4 is especially incomplete  
+- Each version adds new features incrementally:  
+    - v0: Basic features only  
+    - v1: Adds a deadline setting feature  
+    - v2: Adds a proprity setting feature  
+    - v3: Adds an editing feature (Contains a major bug)  
 
 ### [English Word Quiz](javascript/english_exam/)  
 - An english Vocabulary quiz featuring programming-related words  
@@ -246,6 +264,5 @@ python/                      # Python programs for practice
 	- v0: Displays correct/incorrect and the score 
 	- v1: Shows incorrectly answered words after displaying the score  
 	- v2: Gives a message based on the score  
-	- v3: Displays a hint when type "**hint**"  
+	- v3: Provides a hint when you type "**hint**"  
 - Written in JavaScript 
-
