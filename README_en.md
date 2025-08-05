@@ -8,11 +8,18 @@ There are some programs that I wrote for practice.
   - [Windows](#windows)
   - [macOS](#macos)
 - [Directory Structure](#directory-structure)  
+- [Highlights](#highlights)  
+  - [BMI Calvulator](#bmi-calculator)
+  - [Number Guessing Game](#number-guessing-game)  
+  - [Zoadic Sign Checker](#zoadic-sign-checker)  
+  - [English Word Quiz](#english-word-quiz)  
 
 ## Overview
 
 This is a repository of some small programs I created for practice.  
 All files are simple and can be executed directly from the command line.  
+
+Please note that all programs currently output in Japanese.
 
 ## Usage
 
@@ -216,3 +223,29 @@ python/                      # Python programs for practice
 ├── calculator.py            # Four arithmetic operator
 └── chatbot.py               # Chatbot
 ```
+## Hilights
+
+### [BMI Calculator](c/bmi_calculator/v5.c)  
+- Calculates BMI (Body Mass Index) based on height and weight input  
+- If under the age of 16, calculates RI (Rohrer Index) instead of BMI  
+- Written in C  
+
+### [Number Guessing Game](c/number_guessing_game/v5.c) (Highly Recommend!)  
+- A game where you guess a randomly selected number within a certain range  
+- Includes 4 difficulty levels  
+- Written in C  
+
+### [Zoadic Sign Checker](python/04-1_v2.py)  
+- Tells the zoadic sign based on the entered birth date  
+- A simple web app version is also available in another repository: [Zoardic Checker](https://github.com/kotonekanno/zoadic-checker)  
+- Written in Python  
+
+### [English Word Quiz](javascript/english_exam/)  
+- An english Vocabulary quiz featuring programming-related words  
+- Each version has different features:  
+	- v0: Displays correct/incorrect and the score 
+	- v1: Shows incorrectly answered words after displaying the score  
+	- v2: Gives a message based on the score  
+	- v3: Displays a hint when type "**hint**"  
+- Written in JavaScript 
+

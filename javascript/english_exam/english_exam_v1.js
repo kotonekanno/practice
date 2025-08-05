@@ -1,5 +1,3 @@
-#間違えた単語を表示
-
 var eng=['function','variable','loop','condition','array'];
 var jpn=['関数','変数','繰り返し','条件','配列'];
 var x=['','','','',''];

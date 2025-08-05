@@ -1,5 +1,3 @@
-#「hint」と入力することでヒントを表示
-
 var eng=['function','variable','loop','condition','array'];
 var jpn=['関数','変数','繰り返し','条件','配列'];
 var tmp_in,i,j,a,b,jpn_a,jpn_b,score,hint;
