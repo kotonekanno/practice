@@ -4,7 +4,7 @@
 - [概要](#概要)  
 - [実行方法](#実行方法)  
   - [Windows](#windows)
-  - [MacOS](#macos)
+  - [macOS](#macos)
 - [ディレクトリ構成](#ディレクトリ構成)  
 
 ## 概要
@@ -23,39 +23,140 @@
 <details>
 <summary>C言語ファイル</summary>
 
-1. **GCC(MinGWなど)がインストールされているか確認**
-   インストールされていない場合、以下のサイトからインストールしてください。  
-    [MinGW-w64](https://sourceforge.net/projects/mingw-w64/)  
-2. コマンドプロンプトを開く
+1. GCC（MinGWなど）がインストールされているか確認  
+    インストールされていない場合、以下のサイトからインストールしてください。  
+      [MinGW-w64](https://sourceforge.net/projects/mingw-w64/)  
+2. コマンドプロンプトを開く  
 3. ソースコードのあるフォルダに移動（例）  
 
     ```shell
     cd path\to\c_files
     ```
 
-4. コンパイルする
-   ```shell    gcc ファイル名.c -o 実行ファイル名.exe```
+4. コンパイルする  
+
+    ```shell
+    gcc ファイル名.c -o 実行ファイル名.exe
+    ```
+
+5. 実行ファイルを実行する  
+
+    ```shell
+    ./実行ファイル名.exe
+    ```
+
 </details>
 
 <details> <summary>JavaScriptファイル</summary>
-1.
+
+1. Node.jsがインストールされているか確認  
+    インストールされていない場合、以下のサイトからインストールしてください。  
+      [Node.js公式サイト](https://nodejs.org/ja)  
+2. コマンドプロンプトを開く  
+3. スクリプトのあるフォルダに移動（例）  
+
+    ```shell
+    cd path\to\js_files
+    ```
+
+4. 実行する  
+
+    ```shell
+    node ファイル名.js
+    ```
+
 </details>
 
 <details> <summary>Pythonファイル</summary>
-1.
+
+1. Pythonがインストールされているか確認  
+    インストールされていない場合、以下からダウンロードしてください。  
+      [Python公式サイト](https://www.python.org/downloads/)  
+2. コマンドプロンプトを開く  
+3. スクリプトのあるフォルダに移動  
+
+    ```shell
+    cd path\to\python_files
+    ```
+
+4. 実行する  
+
+    ```shell
+    python ファイル名.py
+    ```
+
 </details>
 
-### MacOS
+### macOS
+
 <details> <summary>C言語ファイル</summary>
-1.
+
+1. ターミナルを開く  
+2. GCC（Xcode command Line Tools）がインストールされているか確認  
+    ターミナルを開いて以下を実行すると、インストールがなければ促されます。  
+      
+      ```shell
+      gcc --version
+      ```
+
+3. ソースコードのあるフォルダに移動（例）  
+
+    ```shell
+    cd /path/to/c_files
+    ```
+
+4. コンパイルする  
+
+    ```shell
+    gcc ファイル名.c -o 実行ファイル名
+    ```
+
+5. 実行ファイルを実行する  
+
+    ```shell
+    ./実行ファイル名
+    ```
+
 </details>
 
 <details> <summary>JavaScriptファイル</summary>
-1.
+
+1. Node.jsがインストールされているか確認  
+    インストールされていない場合、以下からダウンロードしてください。  
+      [Node.js公式サイト](https://nodejs.org/ja)  
+2. ターミナルを開く  
+3. スクリプトのあるフォルダに移動（例）  
+
+    ```shell
+    cd /path/to/js_files
+    ```
+
+4. 実行する  
+
+    ```shell
+    node ファイル名.js
+    ```
+
 </details>
 
 <details> <summary>Pythonファイル</summary>
-1.
+
+1. Pythonがインストールされているか確認  
+    macOSはPython3がプリインストールされている場合が多いですが、ない場合は以下からダウンロードしてください。
+      [Python公式サイト](https://www.python.org/downloads/)  
+2. ターミナルを開く
+3. スクリプトのあるフォルダに移動（例）
+
+    ```shell
+    cd /path/to/python_files
+    ```
+
+4. 実行する
+
+    ```shell
+    python3 ファイル名.py
+    ```
+
 </details>
 
 ## ディレクトリ構成
