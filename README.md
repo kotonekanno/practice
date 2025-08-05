@@ -1,8 +1,8 @@
-# practice
+Read this in English: [README_en.md](README_en.md)  
+
+# Practice
 
 学習用に作成した各種プログラムをまとめたリポジトリです。
-
-Read this in English: [README_en.md](README_en.md)  
 
 ### 目次
 - [概要](#概要)  

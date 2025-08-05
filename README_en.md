@@ -1,4 +1,4 @@
-# practice
+# Practice
 
 There are some programs that I wrote for practice.  
 
