@@ -24,11 +24,15 @@
 <summary>C言語ファイル</summary>
 
 1. **GCC(MinGWなど)がインストールされているか確認**
-  - インストールされていない場合、以下のサイトからインストールしてください。  
+   インストールされていない場合、以下のサイトからインストールしてください。  
     [MinGW-w64](https://sourceforge.net/projects/mingw-w64/)  
 2. コマンドプロンプトを開く
 3. ソースコードのあるフォルダに移動（例）  
-   ```shell  cd path\to\c_files```
+
+```shell
+cd path\to\c_files
+```
+
 4. コンパイルする
    ```shell    gcc ファイル名.c -o 実行ファイル名.exe```
 </details>
@@ -59,7 +63,7 @@
 ---  
 
 ```
-c/                              # C言語の練習コード  
+c/                           # C言語の練習コード  
 ├── 1/                       # 標準出力  
 ├── 2/                       # データ型  
 ├── 3/                       # 標準入力  
@@ -78,11 +82,11 @@ c/                              # C言語の練習コード
 ├── bmi_calculator/          # BMI計算プログラム  
 └── number_guessing_game/    # 数字当てゲーム  
   
-javascript/                     # JavaScriptの練習コード  
+javascript/                  # JavaScriptの練習コード  
 ├── english_exam/            # 英単語テストプログラム  
 └── shuffle.js               # シャッフルプログラム  
   
-python/                         # Pythonの練習コード  
+python/                      # Pythonの練習コード  
 ├── 2-1.py                   # 演算子の練習  
 ├── 2-2.py                   # 身長予測プログラム1  
 ├── 2-3.py                   # 割り勘プログラム  
