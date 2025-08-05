@@ -28,11 +28,9 @@
     [MinGW-w64](https://sourceforge.net/projects/mingw-w64/)  
 2. コマンドプロンプトを開く
 3. ソースコードのあるフォルダに移動（例）  
-   ```shell 
-  cd path\to\c_files```
+   ```shell  cd path\to\c_files```
 4. コンパイルする
-   ```shell 
-   gcc ファイル名.c -o 実行ファイル名.exe```
+   ```shell    gcc ファイル名.c -o 実行ファイル名.exe```
 </details>
 
 <details> <summary>JavaScriptファイル</summary>
