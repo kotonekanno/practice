@@ -1,9 +1,0 @@
-m=4
-d=14
-x=m*2
-x+=5
-x*=50
-x+=d
-print(x)
-x-=250
-print(x)
