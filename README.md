@@ -10,6 +10,7 @@ Read this in English: [README_en.md](README_en.md)
   - [Windows](#windows)
   - [macOS](#macos)
 - [ディレクトリ構成](#ディレクトリ構成)  
+- [注目のプログラム](#注目のプログラム)
 
 ## 概要
 
@@ -219,4 +220,6 @@ python/                      # Pythonの練習コード
 └── chatbot.py               # チャットボット
 ```
 
+## 注目のプログラム
 
+- [BMI計算プログラム](c/bmi_calculator/)
