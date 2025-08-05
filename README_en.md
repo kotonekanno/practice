@@ -257,6 +257,7 @@ python/                      # Python programs for practice
     - v1: Adds a deadline setting feature  
     - v2: Adds a proprity setting feature  
     - v3: Adds an editing feature (Contains a major bug)  
+- Written in Python  
 
 ### [English Word Quiz](javascript/english_exam/)  
 - An english Vocabulary quiz featuring programming-related words  
