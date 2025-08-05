@@ -12,6 +12,7 @@ There are some programs that I wrote for practice.
   - [BMI Calvulator](#bmi-calculator)
   - [Number Guessing Game](#number-guessing-game)  
   - [Zoadic Sign Checker](#zoadic-sign-checker)  
+  - [Task Manager](#task-manager)
   - [English Word Quiz](#english-word-quiz)  
 
 ## Overview
