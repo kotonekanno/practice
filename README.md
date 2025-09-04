@@ -1,21 +1,21 @@
-Read this in English: [README_en.md](README_en.md)  
+Read this in English: [README.en.md](README.en.md)  
 
 # Practice
 
 学習用に作成した各種プログラムをまとめたリポジトリです。
 
 ### 目次
-- [概要](#概要)  
-- [注目のプログラム](#注目のプログラム)  
-	- [BMI計算プログラム](#bmi計算プログラム)  
-	- [数当てゲーム](#数当てゲーム)  
-	- [星座判定プログラム](#星座判定プログラム)  
-    - [ToDoアプリ](#todoアプリ)  
-	- [英単語クイズ](#英単語クイズ)  
-- [ディレクトリ構成](#ディレクトリ構成)  
-- [実行方法](#実行方法)  
-	- [Windows](#windows)  
-	- [macOS](#macos)  
+- [概要](#概要)
+- [注目のプログラム](#注目のプログラム)
+  - [BMI計算プログラム](#bmi計算プログラム)
+  - [数当てゲーム （おすすめ）](#数当てゲーム-おすすめ)
+  - [星座判定プログラム](#星座判定プログラム)
+  - [ToDoアプリ](#todoアプリ)
+  - [英単語クイズ](#英単語クイズ)
+- [ディレクトリ構成](#ディレクトリ構成)
+- [実行方法](#実行方法)
+  - [Windows](#windows)
+  - [macOS](#macos)
 
 ## 概要
 
@@ -36,7 +36,7 @@ Read this in English: [README_en.md](README_en.md)
 
 ### [星座判定プログラム](python/04-1_v2.py)  
 - ユーザーの入力した誕生日に基づいて、星座を判定します  
-- 簡単なWebアプリにしたものを別のリポジトリに公開しています（[星座判定アプリ](https://github.com/kotonekanno/zoadic-checker)）  
+- 簡単なWebアプリにしたものを別のリポジトリに公開しています（[星座判定アプリ](https://github.com/kotonekanno/zodiac-checker)）  
 - Pythonで記述しています  
 
 ### [ToDoアプリ](python/todo/)
