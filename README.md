@@ -1,29 +1,27 @@
-Read this in English: [README.en.md](README.en.md)  
-
+<!-- omit in toc -->
 # Practice
 
 学習用に作成した各種プログラムをまとめたリポジトリです。
 
 ### 目次
-- [Practice](#practice)
-    - [目次](#目次)
-  - [概要](#概要)
-  - [注目のプログラム](#注目のプログラム)
-    - [BMI計算プログラム](#bmi計算プログラム)
-    - [数当てゲーム （おすすめ）](#数当てゲーム-おすすめ)
-    - [星座判定プログラム](#星座判定プログラム)
-    - [ToDoアプリ](#todoアプリ)
-    - [英単語クイズ](#英単語クイズ)
-  - [実行方法](#実行方法)
-    - [Windows](#windows)
-    - [macOS](#macos)
-  - [ディレクトリ構成](#ディレクトリ構成)
-  - [索引](#索引)
-    - [C言語基礎](#c言語基礎)
-    - [C言語応用](#c言語応用)
-    - [JavaScript](#javascript)
-    - [Python基礎](#python基礎)
-    - [Python応用](#python応用)
+- [概要](#概要)
+- [注目のプログラム](#注目のプログラム)
+  - [BMI計算プログラム](#bmi計算プログラム)
+  - [数当てゲーム （おすすめ）](#数当てゲーム-おすすめ)
+  - [星座判定プログラム](#星座判定プログラム)
+  - [ToDoアプリ](#todoアプリ)
+  - [迷路ゲーム](#迷路ゲーム)
+  - [英単語クイズ](#英単語クイズ)
+- [実行方法](#実行方法)
+  - [Windows](#windows)
+  - [macOS](#macos)
+- [ディレクトリ構成](#ディレクトリ構成)
+- [索引](#索引)
+  - [C言語基礎](#c言語基礎)
+  - [C言語応用](#c言語応用)
+  - [JavaScript](#javascript)
+  - [Python基礎](#python基礎)
+  - [Python応用](#python応用)
 
 ## 概要
 
@@ -56,6 +54,11 @@ Read this in English: [README.en.md](README.en.md)
     - v2：優先順位を設定できるように改良  
     - v3：編集機能を追加（バグあり）  
 - Pythonで記述しています  
+
+### [迷路ゲーム](python_advanced/6_maze.py)
+- ランダムで生成される迷路のミニゲームです
+- Pythonでipywidgetsライブラリを利用して作成しています
+- Google Colabでの[実行方法](#python応用)を参照してください
 
 ### [英単語クイズ](javascript/english_exam/)  
 - プログラミングに関連する英単語のクイズです  
