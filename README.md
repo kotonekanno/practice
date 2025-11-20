@@ -5,17 +5,25 @@ Read this in English: [README.en.md](README.en.md)
 学習用に作成した各種プログラムをまとめたリポジトリです。
 
 ### 目次
-- [概要](#概要)
-- [注目のプログラム](#注目のプログラム)
-  - [BMI計算プログラム](#bmi計算プログラム)
-  - [数当てゲーム （おすすめ）](#数当てゲーム-おすすめ)
-  - [星座判定プログラム](#星座判定プログラム)
-  - [ToDoアプリ](#todoアプリ)
-  - [英単語クイズ](#英単語クイズ)
-- [ディレクトリ構成](#ディレクトリ構成)
-- [実行方法](#実行方法)
-  - [Windows](#windows)
-  - [macOS](#macos)
+- [Practice](#practice)
+    - [目次](#目次)
+  - [概要](#概要)
+  - [注目のプログラム](#注目のプログラム)
+    - [BMI計算プログラム](#bmi計算プログラム)
+    - [数当てゲーム （おすすめ）](#数当てゲーム-おすすめ)
+    - [星座判定プログラム](#星座判定プログラム)
+    - [ToDoアプリ](#todoアプリ)
+    - [英単語クイズ](#英単語クイズ)
+  - [実行方法](#実行方法)
+    - [Windows](#windows)
+    - [macOS](#macos)
+  - [ディレクトリ構成](#ディレクトリ構成)
+  - [索引](#索引)
+    - [C言語基礎](#c言語基礎)
+    - [C言語応用](#c言語応用)
+    - [JavaScript](#javascript)
+    - [Python基礎](#python基礎)
+    - [Python応用](#python応用)
 
 ## 概要
 
@@ -57,75 +65,6 @@ Read this in English: [README.en.md](README.en.md)
 	- v2：点数に応じてメッセージを表示  
 	- v3：「**hint**」と入力するとヒントを表示  
 - JavaScriptで記述しています  
-
-## ディレクトリ構成
-
-```
-c/                           # C言語の練習コード  
-├── 01/                      # 標準出力  
-├── 02/                      # データ型  
-├── 03/                      # 標準入力  
-├── 04/                      # 演算子  
-├── 05/                      # 条件分岐1  
-├── 06/                      # 条件分岐2  
-├── 07/                      # 乱数  
-├── 08/                      # 繰り返し  
-├── 09/                      # リスト  
-├── 10/                      # 関数  
-├── 11/                      # アドレスとポインタ  
-├── 12/                      # 文字配列  
-├── 13/                      # 構造体  
-├── 14/                      # ファイル  
-├── 15/                      # 複数ファイル  
-├── bmi_calculator/          # BMI計算プログラム  
-└── number_guessing_game/    # 数字当てゲーム  
-  
-javascript/                  # JavaScriptの練習コード  
-├── english_exam/            # 英単語クイズプログラム  
-│   └── english_exam_v0.js    # 基本バージョン  
-│   └── english_exam_v1.js    # 間違えた単語を表示  
-│   └── english_exam_v2.js    # スコアに応じたメッセージを表示  
-│   └── english_exam_v3.js    # ヒントを表示  
-└── shuffle.js               # シャッフルプログラム  
-  
-python/                      # Pythonの練習コード  
-├── todo/                    # ToDoアプリ  
-│   └── todo_v0.py            # 基本バージョン  
-│   └── todo_v1.py            # 締切設定機能を追加  
-│   └── todo_v2.py            # 優先順位設定機能を追加  
-│   └── todo_v3.py            # 編集機能を追加  
-├── 02-1.py                  # 演算子の練習  
-├── 02-2.py                  # 身長予測プログラム1  
-├── 02-3.py                  # 割り勘プログラム  
-├── 03.py                    # 年齢分類プログラム  
-├── 04-1_v1.py               # 星座判定プログラム version1  
-├── 04-1_v2.py               # 星座判定プログラム version2  
-├── 04-2.py                  # おみくじプログラム  
-├── 05-1.py                  # 割り勘プログラム version2  
-├── 05-2_v1.py               # 千羽鶴計算プログラム version1  
-├── 05-2_v2.py               # 千羽鶴計算プログラム version2  
-├── 05-3.py                  # 買い物計算プログラム  
-├── 05-4.py                  # BMI計算プログラム  
-├── 06-1.py                  # 月日計算プログラム  
-├── 06-2_v1.py               # 繰り返し表示の練習1  
-├── 06-2_v2.py               # 繰り返し表示の練習2  
-├── 08_v1.py                 # シーザー暗号プログラム（1文字）  
-├── 08_v2.py                 # シーザー暗号プログラム（単語を暗号化）  
-├── 08_v3.py                 # シーザー暗号プログラム（単語を復号）  
-├── 09-1.py                  # スコア計算プログラム1  
-├── 09-2_v1.py               # シーザー暗号表 version1  
-├── 09-2_v2.py               # シーザー暗号表 version2  
-├── 10_v1.py                 # 身長予測プログラム2 version1  
-├── 10_v2.py                 # 身長予測プログラム2 version2  
-├── 11_v1.py                 # スコア計算プログラム2 version1  
-├── 11_v2.py                 # スコア計算プログラム2 version2  
-├── 12-1.py                  # クラスの練習1  
-├── 12-2.py                  # クラスの練習2  
-├── 13-1.py                  # スコア計算プログラム3  
-├── 13-2.py                  # 面積計算プログラム  
-├── calculator.py            # 四則演算プログラム
-└── chatbot.py               # チャットボット
-```
 
 ## 実行方法
 
@@ -269,3 +208,180 @@ python/                      # Pythonの練習コード
     ```
 
 </details>
+
+## ディレクトリ構成
+
+```
+practice/
+├── c/                  # C言語の練習コード（基礎）
+├── c_advanced/         # C言語の練習コード（応用）
+├── javascript/         # JavaScript
+├── python/             # Pythonの練習コード（基礎）
+├── python_advanced/    # Pythonの練習コード（応用）
+```
+
+## 索引
+
+### [C言語基礎](c/)
+
+1. [標準出力](c/01/)
+2. [データ型](c/02/)
+3. [標準入力](c/03/)
+4. [演算子](c/04/)
+5. [条件分岐1](c/05/)
+6. [条件分岐2](c/06/)
+7. [乱数](c/07/)
+8. [繰り返し](c/08/)
+9. [リスト](c/09/)
+10. [関数](c/10/)
+11. [アドレスとポインタ](c/11/)
+12. [文字配列](c/12/)
+13. [構造体](c/13/)
+14. [ファイル](c/14/)
+15. [複数ファイル](c/15/)
+<br>  
+
+- [BMI計算プログラム](c/bmi_calculator/)
+- [数字当てゲーム](c/number_guessing_game/)
+
+### [C言語応用](c_advanced/)
+
+C言語で記述した各種アルゴリズム
+<br>
+
+1. データの検索
+   - 線形探索
+     - [Version 1](c_advanced/2-1_linear_search.c)
+     - [Version 2](c_advanced/2-2_sentinel_search.c)："番人"の利用による効率化
+     - [ID・名前検索](c_advanced/2-3.c)：
+   - [二分探索](c_advanced/3-1_binary_search.c)
+   - 探索アルゴリズムの比較
+     - [比較1](c_advanced/3-2_search_comparison.c)
+     - [比較2](c_advanced/3-3_prime_search.c)：素数の検索
+2. データの並べ替え（単純）
+   - 交換ソート
+     - バブルソート
+       - [Version 1](c_advanced/4-1_bubble_sort.c)
+       - [Version 2](c_advanced/4-2_bubble_sort_ver2.c)
+     - [コムソート](c_advanced/4-3_comb_sort.c)
+     - [交換ソートの比較](c_advanced/4-4.c)
+   - 挿入ソート
+     - 基本挿入法
+       - [Version 1](c_advanced/5-1_insertion_sort.c)
+       - [Version 2](c_advanced/5-2_insertion_sort_ver2.c)
+     - シェルソート
+       - [Version 1](c_advanced/5-3_shell_sort.c)
+       - [Version 2](c_advanced/5-4_shell_sort_ver2.c)
+     - [挿入ソートの比較](c_advanced/5-5_insertion_sort_comparison.c)
+   - 選択ソート
+     - 基本選択法
+       - [Version 1](c_advanced/6-1_selection_sort.c)
+       - [Version 2](c_advanced/6-2_selection_sort_ver2.c)
+   - 基本挿入法と基本選択法の比較(c_advanced/6-3_comparison.c)
+     - [比較](c_advanced/6-3_comparison.c)
+   - 構造体を利用したレコードの並べ替え
+       - [基本選択法](c_advanced/6-4_selection_sort_student.c)
+       - [基本挿入法1](c_advanced/6-5_insertion_sort_student.c)
+       - [基本挿入法2](c_advanced/6-6_insertion_sort_student_pointer.c)
+
+### [JavaScript](javascript/)
+
+- [英単語クイズプログラム](javascript/english_exam/)
+  - [Version 0](javascript/english_exam/english_exam_v0.js)：基本バージョン
+  - [Version 1](javascript/english_exam/english_exam_v1.js)：間違えた単語を表示
+  - [Version 2](javascript/english_exam/english_exam_v2.js)：スコアに応じたメッセージを表示
+  - [Version 3](javascript/english_exam/english_exam_v3.js)：ヒントを表示
+- [シャッフルプログラム](javascript/shuffle.js)
+
+### [Python基礎](python/)
+
+1. 演算子
+   - [演算子の練習](python/02-1.py)
+   - [身長予測プログラム1](python/02-2.py)
+   - [割り勘プログラム](python/02-3.py)
+2. 条件分岐   
+   - if文
+     - [年齢分類プログラム](python/03.py)
+     - [おみくじプログラム](python/04-2.py)
+   - match文
+     - [星座判定プログラム version1](python/04-1_v1.py)
+     - [星座判定プログラム version2](python/04-1_v2.py)
+3. 繰り返し
+   - while文
+     - [割り勘プログラム version2](python/05-1.py)
+     - [千羽鶴計算プログラム version1](python/05-2_v1.py)
+     - [千羽鶴計算プログラム version2](python/05-2_v2.py)
+     - [買い物計算プログラム](python/05-3.py)
+     - [BMI計算プログラム](python/05-4.py)
+   - for文
+     - [月日計算プログラム](python/06-1.py)
+     - [繰り返し表示の練習1](python/06-2_v1.py)
+     - [繰り返し表示の練習2](python/06-2_v2.py)
+4. 配列
+   - [シーザー暗号プログラム1](python/08_v1.py)：1文字
+   - [シーザー暗号プログラム2](python/08_v2.py)：単語を暗号化
+   - [シーザー暗号プログラム3](python/08_v3.py)：単語を復号
+   - [スコア計算プログラム1](python/09-1.py)
+   - [シーザー暗号表 version1](python/09-2_v1.py)
+   - [シーザー暗号表 version2](python/09-2_v2.py)
+5. 関数
+   - [身長予測プログラム2 version1](python/10_v1.py)
+   - [身長予測プログラム2 version2](python/10_v2.py)
+   - [スコア計算プログラム2 version1](python/11_v1.py)
+   - [スコア計算プログラム2 version2](python/11_v2.py)
+6. クラス
+   - [クラスの練習1](python/12-1.py)
+   - [クラスの練習2](python/12-2.py)
+   - [スコア計算プログラム3](python/13-1.py)
+   - [面積計算プログラム](python/13-2.py)
+<br>
+
+- [四則演算プログラム](python/calculator.py)
+- [チャットボット](python/chatbot.py)
+- [ToDoアプリ](python/todo/)
+  - [Version 0](python/todo/todo_v0.py)：基本バージョン
+  - [Version 1](python/todo/todo_v1.py)：締め切り設定機能を追加
+  - [Version 2](python/todo/todo_v2.py)：優先順位機能を追加
+  - [Version 3](python/todo/todo_v3.py)：編集機能を追加
+
+### [Python応用](python_advanced/)
+
+ライブラリを活用したPythonプログラム  
+
+<br>
+※ローカル環境では実行できない形式になっています。
+推奨される実行環境：Google Colab
+
+<details>
+<summary>実行方法</summary>
+
+1. [Google Colabを開く](https://colab.research.google.com/)  
+2. 左下の「ノードブックを新規作成」を選択
+3. 実行したいコードをコピー＆ペースト
+4. 左上の実行ボタンから実行
+</details>
+
+<br>
+
+1. GUI：ipywidgets
+   - [スライダー](python_advanced/3_slider.py)
+   - [英単語クイズ](python_advanced/3_word_quiz.py)
+2. データの可視化：Matplotlib
+   - [迷路ゲーム](python_advanced/6_maze.py)
+   - [漢字クイズ](python_advanced/6_word_quiz.py)
+3. 自然言語処理
+   - 形態素解析：Janome
+     - [日本語の解析](python_advanced/7-1_kokoro.py)
+   - ワードクラウド：WordCloud
+     - [英語で作成](python_advanced/7-2_word_cloud1.py)
+     - [日本語で作成](python_advanced/7-2_word_cloud2.py)
+     - [日本語・名詞のみで作成](python_advanced/7-2_word_cloud3.py)
+     - [日本語・形容詞のみで作成](python_advanced/7-2_word_cloud4.py)
+   - 文章のベクトル化（数値化）：
+     - BoW
+       - [英語](python_advanced/7-3_bow1.py)
+       - [日本語](python_advanced/7-3_bow2.py)
+       - [類似度の計算](python_advanced/7-3_bow3.py)
+     - TF-IDF：単語の重要度計算
+       - [日本語](python_advanced/7-4_tfidf1.py)
+       - [類似度の計算](python_advanced/7-4_tfidf2.py)

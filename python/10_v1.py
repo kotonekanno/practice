@@ -8,7 +8,7 @@ def girl_height(fa_height,mo_height):
 fa = 183
 mo = 159
 
-boy = boy(fa,mo)
+boy = boy_height(fa,mo)
 print("男の子の身長：",boy)
-girl = girl(fa,mo)
+girl = girl_height(fa,mo)
 print("女の子の身長：",girl)
