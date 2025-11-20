@@ -280,7 +280,7 @@ C言語で記述した各種アルゴリズム
      - 基本選択法
        - [Version 1](c_advanced/6-1_selection_sort.c)
        - [Version 2](c_advanced/6-2_selection_sort_ver2.c)
-   - 基本挿入法と基本選択法の比較(c_advanced/6-3_comparison.c)
+   - 基本挿入法と基本選択法の比較
      - [比較](c_advanced/6-3_comparison.c)
    - 構造体を利用したレコードの並べ替え
        - [基本選択法](c_advanced/6-4_selection_sort_student.c)
@@ -387,4 +387,5 @@ C言語で記述した各種アルゴリズム
        - [類似度の計算](python_advanced/7-3_bow3.py)
      - TF-IDF：単語の重要度計算
        - [日本語](python_advanced/7-4_tfidf1.py)
+
        - [類似度の計算](python_advanced/7-4_tfidf2.py)
