@@ -12,6 +12,7 @@
   - [ToDoアプリ](#todoアプリ)
   - [迷路ゲーム](#迷路ゲーム)
   - [英単語クイズ](#英単語クイズ)
+  - [計算機アプリ](#計算機アプリ)
 - [実行方法](#実行方法)
   - [Windows](#windows)
   - [macOS](#macos)
@@ -22,6 +23,7 @@
   - [JavaScript](#javascript)
   - [Python基礎](#python基礎)
   - [Python応用](#python応用)
+  - [Web](#web)
 
 ## 概要
 
@@ -68,6 +70,11 @@
 	- v2：点数に応じてメッセージを表示  
 	- v3：「**hint**」と入力するとヒントを表示  
 - JavaScriptで記述しています  
+
+### [計算機アプリ](web/calculator.html)
+- 一見ふつうの計算機ですが、特殊なモードが用意されているアプリです
+- 画面内のヒントを基に特殊コマンドを実行すると、モードを切り替えることができます
+- HTMLファイルです
 
 ## 実行方法
 
@@ -216,11 +223,12 @@
 
 ```
 practice/
-├── c/                  # C言語の練習コード（基礎）
-├── c_advanced/         # C言語の練習コード（応用）
+├── c/                  # C言語（基礎）
+├── c_advanced/         # C言語（応用）
 ├── javascript/         # JavaScript
-├── python/             # Pythonの練習コード（基礎）
-├── python_advanced/    # Pythonの練習コード（応用）
+├── python/             # Python（基礎）
+├── python_advanced/    # Python（応用）
+├── web/                # JavaScriptのDOM操作
 ```
 
 ## 索引
@@ -389,3 +397,10 @@ C言語で記述した各種アルゴリズム
        - [日本語](python_advanced/7-4_tfidf1.py)
 
        - [類似度の計算](python_advanced/7-4_tfidf2.py)
+
+### [Web](web/)
+
+JavaScriptのDOM操作
+<br>
+
+- [計算機アプリ](web/calculator.html)

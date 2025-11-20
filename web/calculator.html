@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>計算機</title>
+    <style>
+      h1{
+        text-align: center;
+        font-size: 50px;
+      }
+      .frame{
+        color: lightblue;
+      }
+      p{
+        font-size: 30px;
+      }
+      input{
+        width: 200px;
+        padding: 3px;
+        font-size: 30px;
+        text-align: right;
+      }
+      #output{
+        padding: 3px;
+        font-size: 50px;
+      }
+      button{
+        width: 200px;
+        padding: 5px;
+        margin: 15px;
+        font-size: 30px;
+      }
+      #hint{
+        font-size: 10px;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 class="frame">− ✕ ÷ ＋ ÷ − ✕ </h1>
+    <h1 id="title">ふつうの計算機</h1>
+    
+    <div style="text-align: center;">  
+      <p>a: <input type="text" id="input1"></p>
+      <p>b: <input type="text" id="input2"></p>
+
+      <div id="button_area">
+        <div>
+          <span><button onclick="plus(); onClick('add');">足し算</button></span>
+          <span><button onclick="minus(); onClick('sub');">引き算</button></span>
+        </div>
+        <div>
+          <span><button onclick="times(); onClick('mul');">掛け算</button></span>
+          <span><button onclick="divide(); onClick('div');">割り算</button></span>
+        </div>
+      </div>
+
+      <p id="output">a □ b = ?</p>
+      <div id="secret_quiz"></div>
+      <p id="msg"></p>
+      
+      <details id="hint">
+        <summary>特殊コマンドの答え</summary>
+        引き算→掛け算→割り算→足し算→割り算→引き算→掛け算
+      </details> 
+    </div>
+
+    <h1 class="frame">− ✕ ÷ ＋ ÷ − ✕ </h1>
+    
+  </body>
+  <script>
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+    const output = document.getElementById("output");
+
+    const title = document.getElementById("title");
+    const buttons = document.getElementsByTagName("button");
+    const buttonArea = document.getElementById("button_area");
+    const secretQuiz = document.getElementById("secret_quiz");
+    const frame = document.getElementsByClassName("frame");
+    const msg = document.getElementById("msg");
+
+    let secretMode = false;
+    let secretCmd = ["sub", "mul", "div", "add", "div", "sub", "mul"];
+    let index = 0;
+
+    function plus() {
+      msg.innerHTML = ""
+      let result = Number(input1.value) + Number(input2.value);
+      if (!secretMode) str = "a + b = " + result;
+      else str = "a ? b = " + result;
+      output.innerHTML = str;
+    }
+    function minus() {
+      msg.innerHTML = ""
+      let result = Number(input1.value) - Number(input2.value);
+      if (!secretMode) str = "a - b = " + result;
+      else str = "a ? b = " + result;
+      output.innerHTML = str;
+    }
+    function times() {
+      msg.innerHTML = ""
+      let result = Number(input1.value) * Number(input2.value);
+      if (!secretMode) str = "a ✕ b = " + result;
+      else str = "a ? b = " + result;
+      output.innerHTML = str;
+    }
+    function divide() {
+      msg.innerHTML = ""
+      let result = Number(input1.value) / Number(input2.value);
+      if (!secretMode) str = "a ÷ b = " + result;
+      else str = "a ? b = " + result;
+      output.innerHTML = str;
+    }
+
+    function onClick(type) {
+      if (!secretMode) {
+        if (type === secretCmd[index]) {
+          index++;
+          if (index === secretCmd.length) changeMode();
+        } else {
+          index = 0;
+        }
+      }
+    }
+
+    function answer() {
+      const topLeft = document.getElementById("top_left");
+      const topRight = document.getElementById("top_right");
+      const bottomLeft = document.getElementById("bottom_left");
+      const bottomRight = document.getElementById("bottom_right");
+
+      if (topLeft.value === "引き算" && topRight.value === "割り算" && bottomLeft.value === "掛け算" && bottomRight.value === "足し算") {
+        msg.innerHTML = "正解☺"
+        revertMode();
+      } else {
+        msg.innerHTML = "不正解😈"
+      }
+    }
+    
+    function changeMode() {
+      secretMode = true;
+      title.innerHTML = "阿修羅計算機";
+      title.style.color = "red";
+      for (let i=0; i<2; i++) frame[i].innerHTML = "😈😈😈😈😈😈😈";
+
+      buttonArea.innerHTML = `
+        <div>
+          <span><button onclick="minus(); onClick('sub');">？？？</button></span>
+          <span><button onclick="divide(); onClick('div');">？？？</button></span>
+        </div>
+        <div>
+          <span><button onclick="times(); onClick('mul');">？？？</button></span>
+          <span><button onclick="plus(); onClick('add');">？？？</button></span>
+        </div>
+      `;
+
+      secretQuiz.innerHTML = `
+        <div>
+          <span class="ans"><select id="top_left">
+            <option>足し算</option>
+            <option>引き算</option>
+            <option>掛け算</option>
+            <option>割り算</option>
+          </select></span>
+          <span class="ans"><select id="top_right">
+            <option>足し算</option>
+            <option>引き算</option>
+            <option>掛け算</option>
+            <option>割り算</option>
+          </select></span>
+        </div>
+        <div>
+          <span class="ans"><select id="bottom_left">
+            <option>足し算</option>
+            <option>引き算</option>
+            <option>掛け算</option>
+            <option>割り算</option>
+          </select></span>
+          <span class="ans"><select id="bottom_right">
+            <option>足し算</option>
+            <option>引き算</option>
+            <option>掛け算</option>
+            <option>割り算</option>
+          </select></span>
+        </div>
+        <p><button onclick="answer();">答え合わせ</button></p>
+      `;
+    }
+    
+    function revertMode() {
+      secretMode = false;
+      title.innerHTML = "ふつうの計算機";
+      title.style.color = "black";
+      for (let i=0; i<2; i++) frame[i].innerHTML = "− ✕ ÷ ＋ ÷ − ✕ ";
+      buttons[0].innerHTML = "足し算";
+      buttons[1].innerHTML = "引き算";
+      buttons[2].innerHTML = "掛け算";
+      buttons[3].innerHTML = "割り算";
+
+      buttonArea.innerHTML = `
+        <div>
+          <span><button onclick="plus(); onClick('add');">足し算</button></span>
+          <span><button onclick="minus(); onClick('sub');">引き算</button></span>
+        </div>
+        <div>
+          <span><button onclick="times(); onClick('mul');">掛け算</button></span>
+          <span><button onclick="divide(); onClick('div');">割り算</button></span>
+        </div>
+      `
+      secretQuiz.innerHTML = ""
+    }
+  </script>
+</html>
