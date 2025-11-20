@@ -352,13 +352,13 @@ C言語で記述した各種アルゴリズム
 ライブラリを活用したPythonプログラム  
 
 <br>
-※ローカル環境では実行できない形式になっています。
-推奨される実行環境：Google Colab
+※ローカル環境では実行できない形式になっています。  
+　推奨される実行環境：Google Colab
 
 <details>
 <summary>実行方法</summary>
 
-1. [Google Colabを開く](https://colab.research.google.com/)  
+1. [Google Colab](https://colab.research.google.com/)を開く 
 2. 左下の「ノードブックを新規作成」を選択
 3. 実行したいコードをコピー＆ペースト
 4. 左上の実行ボタンから実行
