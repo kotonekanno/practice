@@ -16,6 +16,7 @@
 - [実行方法](#実行方法)
   - [Windows](#windows)
   - [macOS](#macos)
+  - [その他](#その他)
 - [ディレクトリ構成](#ディレクトリ構成)
 - [索引](#索引)
   - [C言語基礎](#c言語基礎)
@@ -219,6 +220,17 @@
 
 </details>
 
+### その他
+
+<details> <summary>Google ColabでのPythonファイル実行</summary>
+
+1. [Google Colab](https://colab.research.google.com/)を開く 
+2. 左下の「ノードブックを新規作成」を選択
+3. 実行したいコードをコピー＆ペースト
+4. 左上の実行ボタンから実行
+
+</details>
+
 ## ディレクトリ構成
 
 ```
@@ -264,7 +276,7 @@ C言語で記述した各種アルゴリズム
    - 線形探索
      - [Version 1](c_advanced/2-1_linear_search.c)
      - [Version 2](c_advanced/2-2_sentinel_search.c)："番人"の利用による効率化
-     - [ID・名前検索](c_advanced/2-3.c)：
+     - [ID・名前検索](c_advanced/2-3.c)
    - [二分探索](c_advanced/3-1_binary_search.c)
    - 探索アルゴリズムの比較
      - [比較1](c_advanced/3-2_search_comparison.c)
@@ -360,17 +372,10 @@ C言語で記述した各種アルゴリズム
 ライブラリを活用したPythonプログラム  
 
 <br>
-※ローカル環境では実行できない形式になっています。  
-　推奨される実行環境：Google Colab
 
-<details>
-<summary>実行方法</summary>
-
-1. [Google Colab](https://colab.research.google.com/)を開く 
-2. 左下の「ノードブックを新規作成」を選択
-3. 実行したいコードをコピー＆ペースト
-4. 左上の実行ボタンから実行
-</details>
+- ローカル環境では実行できない形式になっています。    
+- 推奨される実行環境：Google Colab
+- 実行方法：[Google ColabでのPythonファイル実行](#その他)
 
 <br>
 
