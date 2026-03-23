@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>じゃんけんシューティング</title>
+    <style>
+      * {
+        margin: 0px;
+      }
+      body {
+        background-color: #000000;
+      }
+      p {
+        text-align: center;
+        font-size: 30px;
+      }
+      #canvas1 {
+        border: 1px solid black;
+        background-color: white;
+      }
+      #btn1 {
+        margin: 10px;
+      }
+      #output2 {
+        height: 100px;
+        color: red;
+      }
+      #output3 {
+        height: 0;
+        color: gray;
+      }
+      .text1 {
+        color: red;
+        font-weight: bold;
+      }
+      .text2 {
+        margin: auto 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <p>
+      <canvas id="canvas1" width="320" height="480"></canvas>
+    </p>
+    <p class="text1"><span id="output1"></span>/100点</p>
+    <p id="btn1"></p>
+
+    <script>
+      const canvas1 = document.getElementById("canvas1");
+      const ctx1 = canvas1.getContext("2d");
+      const output1 = document.getElementById("output1");
+      const output2 = document.getElementById("output2");
+      const output3 = document.getElementById("output3");
+      const btn1 = document.getElementById("btn1");
+
+      // 画像読み込み
+      const rockImg = new Image();
+      const scissorsImg = new Image();
+      const paperImg = new Image();
+      rockImg.src = "assets/images/17390.png";
+      scissorsImg.src = "assets/images/17430.png";
+      paperImg.src = "assets/images/17431.png";
+
+      // 音声読み込み
+      const shootAudio = new Audio();
+      const winAudio = new Audio();
+      const loseAudio = new Audio();
+      const drawAudio = new Audio();
+      const changeAudio = new Audio();
+      const setAudio = new Audio();
+      const clearAudio = new Audio();
+      const endAudio = new Audio();
+      shootAudio.src = "assets/audios/shoot.mp3";
+      winAudio.src = "assets/audios/win.mp3";
+      loseAudio.src = "assets/audios/lose.mp3";
+      drawAudio.src = "assets/audios/draw.mp3";
+      changeAudio.src = "assets/audios/change.mp3";
+      setAudio.src = "assets/audios/set.mp3";
+      clearAudio.src = "assets/audios/clear.mp3";
+      endAudio.src = "assets/audios/end.mp3";
+
+      // 初期化
+      const target = { x: 250, y: 100, dir: 1 };
+      const player = { x: 250, y: 400 };
+      const ball = { x: -10, y: -10 };
+      let point = 0;
+      let maxPoint = 0;
+      output1.innerHTML = point;
+
+      let pcHand = 0;
+      let pcHandImg = rockImg;
+      let playerHand = 1;
+      let playerHandImg = scissorsImg;
+
+      setInterval(game1, 30);
+      setInterval(pcJanken, 5000);
+
+      // じゃんけん選択エリア描画
+      rectXs = [0, 110, 220];
+      handXs = [30, 140, 250];
+      handImgs = [rockImg, scissorsImg, paperImg];
+
+      for (let i = 0; i < 3; i++) {
+        if (i === playerHand) ctx1.fillStyle = "red";
+        else ctx1.fillStyle = "lightgray";
+
+        ctx1.fillRect(rectXs[i], 420, 100, 60);
+        handImgs[i].onload = () => {
+          ctx1.drawImage(handImgs[i], handXs[i], 430, 40, 40);
+        };
+      }
+
+      // ゲーム
+      function game1(){
+        ctx1.clearRect(0, 0, 320, 420);
+        
+        // 描画：ターゲット、プレイヤー
+        ctx1.fillStyle = "black";
+        ctx1.fillRect(target.x - 25, target.y - 5, 50, 10);
+        ctx1.fillStyle = "blue";
+        ctx1.fillRect(player.x - 25, player.y - 5, 50, 10);
+
+        // 描画：じゃんけんの手
+        ctx1.drawImage(pcHandImg, target.x - 10, target.y - 25, 20, 20);
+        ctx1.drawImage(playerHandImg, player.x - 10, player.y - 25, 20, 20);
+
+        // 描画：ボール
+        ctx1.fillStyle = "red";
+        ctx1.fillRect(ball.x - 5, ball.y - 5, 10, 10);
+
+        // 移動計算
+        target.x += target.dir;
+        ball.y -= 5;
+
+        if (target.x < 25 || 295 < target.x) {
+          target.dir *= -1;
+        }
+
+        // 得点計算
+        if (ball.y === 100 && (Math.abs(target.x - ball.x) < 25)) {
+          result = judge();
+
+          if (result === 1) {
+            point++;
+            if (point > maxPoint) {
+              maxPoint = point;
+              if (maxPoint > 0 && maxPoint % 10 === 0) onGetPoint();
+            }
+            winAudio.play();
+          } else if (result === 2) {
+            if (point > 0) point--;
+            loseAudio.play();
+          } else {
+            drawAudio.play();
+          }
+
+          output1.innerHTML = point;
+        }
+      }
+
+      // 描画：じゃんけんの手選択エリア
+      function drawHands() {
+        for (let i = 0; i < 3; i++) {
+          if (i === playerHand) ctx1.fillStyle = "red";
+          else ctx1.fillStyle = "lightgray";
+
+          ctx1.fillRect(rectXs[i], 420, 100, 60);
+          ctx1.drawImage(handImgs[i], handXs[i], 430, 40, 40);
+        }
+      }
+
+      // じゃんけんの手選択／シュート
+      canvas1.addEventListener("mousedown", function (e) {
+        const rect = e.target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top
+
+        if (y >= 420) {
+          prePlayerHand = playerHand;
+
+          if (x <= 105) playerHand = 0;
+          else if (x <= 215) playerHand = 1;
+          else playerHand = 2;
+
+          playerHandImg = handImgs[playerHand];
+          drawHands();
+          setAudio.play();
+          return;
+        }
+
+        ball.x = player.x;
+        ball.y = player.y;
+        shootAudio.play();
+      });
+
+      // プレーヤコントロール
+      canvas1.addEventListener("mousemove", function (e) {
+        const rect = e.target.getBoundingClientRect();
+        player.x = e.clientX - rect.left;
+      });
+
+      // じゃんけん（0: グー, 1: チョキ, 2: パー）
+      function pcJanken() {
+        pcHand = Math.floor(Math.random() * 3);
+        pcHandImg = handImgs[pcHand];
+        changeAudio.play();
+      }
+
+      function convertToImg(hand) {
+        if (hand === 0) return rockImg;
+        else if (hand === 1) return scissorsImg;
+        else return paperImg;
+      }
+
+      function judge() {
+        // 0: あいこ, 1: 勝ち, 2: 負け
+        if (playerHand === pcHand)  return 0;
+        else if (playerHand === pcHand - 1 || playerHand === pcHand + 2) return 1;
+        else return 2;
+      }
+
+      // 得点に応じた処理
+      function onGetPoint () {
+        if (maxPoint === 100) {
+          output2.innerHTML = '<h1>You win!</h1>';
+          btn1.innerHTML = '<button onclick="restart();"><p class="text2">Restart</p></button>';
+          updateBackground();
+          endAudio.play();
+          startPraise();
+        } else {
+          updateBackground();
+          clearAudio.play();
+        }
+        output1.innerHTML = point;
+      }
+
+      const bgColor = [
+        "#1a1a1a", // 10点
+        "#333333", // 20点
+        "#4d4d4d", // 30点
+        "#666666", // 40点
+        "#808080", // 50点
+        "#999999", // 60点
+        "#b3b3b3", // 70点
+        "#cccccc", // 80点
+        "#e6e6e6", // 90点
+        "#ffffff"  // 100点
+      ];
+
+      function updateBackground() {
+        document.body.style.backgroundColor = bgColor[maxPoint / 10];
+      }
+
+      function restart() {
+        point = maxPoint = 0;
+        output1.innerHTML = point;
+        output2.innerHTML = "";
+        output3.innerHTML = "";
+        updateBackground();
+      }
+
+      const compliments = [
+        "You are such a genius!",
+        "Your brain is illegally powerful!",
+        "Your IQ just caused a minor earthquake!",
+        "Scientists are taking notes on your existence!",
+        "Your thoughts are too fast for physics!",
+        "Your brain just did a triple backflip!",
+        "You are the final boss of intelligence!",
+        "Aliens are requesting your autograph!",
+        "Your neurons are screaming in fear!",
+        "Your brain runs on forbidden firmware!",
+        "You are thinking in 12 dimensions!",
+        "Your brain needs a speed limit!",
+        "Your IQ has its own gravitational field!",
+        "Your intelligence has been reported to NASA!",
+        "You are too smart for this timeline!",
+        "Your brain just unlocked god mode!",
+        "Your thoughts are classified information!",
+        "Your brain emits intellectual radiation!",
+        "Your existence is a scientific anomaly!"
+      ];
+
+      let praiseIndex = 0;
+
+      function startPraise() {
+        praiseIndex = 0;
+        output3.innerHTML = "";
+        showPraise();
+      }
+
+      function showPraise() {
+        if (praiseIndex >= compliments.length) {
+          return;
+        }
+
+        output3.innerHTML += compliments[praiseIndex] + "<br>";
+        praiseIndex++;
+
+        setTimeout(showPraise, 200);
+      }
+
+    </script>
+  </body>
+</html>
